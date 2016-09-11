@@ -1,10 +1,9 @@
 class SocialNetworkController < RootApp
-  ROOT_NODE = "24"
+    ROOT_NODE = "24"
 
-    get '/' do
-      "something"
-    end
-    
+
+    # Uses the twitter module to retrieve the tweets from a specified user(not retweets) and
+    # returns a JSON object with the number of tweets per hour of today 
     get '/:user' do |user|
         today = Time.now.day
         per_hour_posts = Hash[ROOT_NODE,{}]

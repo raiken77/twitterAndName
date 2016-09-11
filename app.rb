@@ -3,8 +3,6 @@ require 'json'
 require 'sinatra/json'
 require 'sinatra/reloader'
 
-
-
 class RootApp < Sinatra::Base
 
     configure :development do

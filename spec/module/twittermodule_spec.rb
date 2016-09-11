@@ -7,14 +7,14 @@ RSpec.describe TwitterUtility do
     end
 
     describe "Testing twitter module" do
-      it "basic fetch" do
-        tweets  = TwitterUtility.getPostsForUser("dhh")
-        expect(tweets).not_to be_empty
-      end
+        it "basic fetch" do
+            tweets  = TwitterUtility.getPostsForUser("dhh")
+            expect(tweets).not_to be_empty
+        end
 
-      it "null fetch" do
-        tweets = TwitterUtility.getPostsForUser(nil)
-        expect(tweets).to be_empty
-      end
+        it "null fetch" do
+            tweets = TwitterUtility.getPostsForUser(nil)
+            expect(tweets).to be_empty
+        end
     end
 end

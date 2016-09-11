@@ -1,5 +1,6 @@
 require 'twitter'
 
+# Twitter module that uses the twitter gem to interact with the twitter API
 module TwitterUtility
 
     @@client = Twitter::REST::Client.new do |config|
@@ -10,9 +11,9 @@ module TwitterUtility
     end
 
 
-
-  def TwitterUtility.getPostsForUser(user)
-    @@client.user_timeline(user)
-  end
+    # Retrieve all the tweets of a user
+    def TwitterUtility.getPostsForUser(user)
+        @@client.user_timeline(user)
+    end
 
 end
